@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+
+
+body{
+    font-family: 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background-color: #fce2b8;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    flex-wrap: wrap;
+    font-size: smaller;
+}
+
+input {
+    font-family: 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size: 10px;
+    
+}
+ .pretty{
+                
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                outline: none;
+                width: 200px;
+                height: 50px;
+                padding: 12px 16px;
+                border: 1px #f6bb5c solid;
+                border-color: rgb(162, 65, 0);
+                border-width: 3px;
+                border-radius: 0px;
+                background-color: #f8e9cf;
+                transition: background 0.1s ease;
+
+            }
+
+            .pretty:hover{
+                background-color: #fff6e9;
+
+            }
+
+img {
+  margin: 0 auto;
+  width: 80%;
+height: auto;
+overflow: hidden;
+
+}
+
+.login-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    max-height: 100vh;
+}
+.login-art{
+    background-color: #f6bb5c;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 180px;
+    max-height: 100%;
+    max-width: 600px;
+}
+
+.login-card{
+    grid-template-columns: 1fr 1 fr;
+    background-color: #fce2b8;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    display:grid;
+    place-items:center;
+    padding:28px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+form{
+    display: none;
+}
+    #tab-signin:checked ~ #signin-form,
+    #tab-signup:checked ~ #signup-form{
+        display: block;
+        
+}
+
+.field{         
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                outline: none;
+                width: 240px;
+                height: 20px;
+                padding: 12px 12px;
+                border: 1px #f6bb5c solid;
+                border-color: rgb(162, 65, 0);
+                border-width: 3px;
+                background-color: #f8e9cf;
+                transition: background 0.1s ease;
+            }
+
+        .field:hover{
+                background-color: #fff6e9;
+            }
+#tab-signin:checked ~ .tabs label[for="tab-signin"] {
+  background: #f7935d;
+
+}
+
+#tab-signup:checked ~ .tabs label[for="tab-signup"] {
+  background: #f7935d;
+  
+}
+form label {
+  display: block;      
+  text-align: left;     
+  margin-bottom: 4px;
+  
+}
+
+.tabs label{
+    
+  display: inline-block;
+  padding: 6px 16px;
+  cursor: pointer;
+  background-color: #fce8c6;
+  border: 2px #f9d396 dotted;
+}
+
+.tabs label + label { margin-left: -7px; }
+
+#tab-signin,#tab-signup{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#container{
+    
+    width: 100%;
+    max-width: 240px;
+    background: #f8e9cf;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(27, 36, 48, 0.12);
+}
+
+img{
+    width: 410px;
+    flex-shrink: 0;
+}
+
+button{
+    background-color:#fb8d51;
+    box-shadow: 0 10px 30px rgba(18, 24, 32, 0.12);
+    border: 2px #f9d396 dotted;
+    border-color: #ffbf58;
+}
