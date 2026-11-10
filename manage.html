@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>PageBook - Manage</title>
+ <link rel="icon" href="images/orgPagebook.png">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body align="center">
+    <div class="rectangle">
+        <div id="container">
+            <br><div class="clicks">
+                <img src="images/orgPagebook.png" alt="logo" width="80" >
+            </div>
+            <br><div><a href="index.html"><div class="click"><img src="images/home.png"><small>Home</small></div></a></div>
+            <br><div><a href="library.html"><div class="click"><img src="images/library.png"><small>Library</small></div></a></div>
+            <br><div><a href=saved.html><div class="click"><img src="images/bookmark.png"><small>Saved</small></div></a></div>
+            <br><div><a href=manage.html><div class="click"><img src="images/folder.png"><small>Manage</small></div></a></div>
+            <p class="big-space"></p>
+            <div><a href=images/silly.webp><div class="click"><font style=color:rgb(123,0,0)><img src="images/logout.png"><small>Log out</small></font></div></a></div>
+        </div>
+        <div id="feed">
+            <form class="search-bar">
+                <input type="text" placeholder="Author, Book Titles, etc.">
+                <button type="reset"><img src="images/orgsearchicon.png"></button>
+            </form>
+            <div class="cont">
+                <h1 align="left" style="margin-left: 7px;">Manage</h1>
+                <h4 align="left" style="margin-left: 7px; color: rgb(107, 105, 105);">23 books saved in "All"</h4>
+                <div id="manage-book"></div>
+            </div>
+            </div>
+        <div id="add">      
+        <form id="add-book" class="add-books">
+                            <h2>ADD A BOOK</h2>
+                            <input id="Title" type="text" placeholder="Book Title" required>
+                            <input id="Author" type="text" placeholder="Author" required>
+                            <input id="Genre" type="text" placeholder="Genre" required>
+                            <input id="Description" type="text" placeholder="Description" >
+                            <input id="Cover-img" type="text" placeholder="Cover image">
+                            <input id="link" type="text" placeholder="link">
+                
+                        <button type="submit" id="submit-book">Add Book</button>
+                        <button type="button" id="cancel" hidden>Cancel</button>
+                        <p id="form-message"></p>
+        </form>
+        </div>
+    </div>
+<script src="js/manage.js"></script>
+</body>
+
+</html>
