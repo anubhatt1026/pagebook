@@ -38,6 +38,7 @@ body{
    margin-top: -723px;
     text-align: center;
         border:solid;
+        overflow-y: auto;
     width:900px;
     height: 718px;
     background-color: #f2e6d2;
@@ -49,7 +50,8 @@ body{
     }
 
 .rectangle > #add {
-     .rectangle > #add {
+    margin-left: 1000px;
+    margin-top: -723px;
         box-sizing: border-box;
         overflow-y: auto;
     }
@@ -57,9 +59,12 @@ body{
         background: transparent;
         border: 0;
     }
+    #open-add{
+        display: none;
+    }
 }
 
-}
+
     @media(max-width:600px){
          .rectangle{
         border: solid;
@@ -114,6 +119,7 @@ body{
         margin: 0;
         text-align: center;
         border: solid;
+        overflow-y: auto;
     width: auto;
     height: auto;
     background-color:#f2e6d2;
@@ -165,7 +171,13 @@ body{
     #add-book > * { grid-column: 1 !important; }
     #add-book #cancel,
     #add-book #submit-book { justify-self: stretch; }
-}
+
+
+    #open-add{
+        background-color: #dd6c02;
+        border: 1px solid black;
+        height: 3em;
+    }
 
     .big-space{
     margin-bottom: 400px;
@@ -187,7 +199,7 @@ body{
     margin-top: 10px;
     width: 30px;
  }
-    
+}   
  
     a{  align-self: center;
         color:#2e0500;
@@ -299,21 +311,11 @@ h4{ display: flex;
     gap: 16px;
     padding: 16px;
     border:0px solid #2e0500;
-
-    /* horizontal scrolling */
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: #2e0500 #f2e4d0;
 }
 
 /* Card: title on top, author + genre in one row, description below */
 .book-card {
     flex: 0 0 300px;              /* fixed width, no shrinking */
-    scroll-snap-align: start;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -354,7 +356,7 @@ h4{ display: flex;
 
 .book-card p:nth-of-type(1) {            /* author */
     grid-area: author;
-    font-size: 0.85rem;
+    font-size: 0.85em;
     font-style: italic;
 }
 
@@ -362,7 +364,7 @@ h4{ display: flex;
     grid-area: genre;
     justify-self: end;
     align-self: start;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     padding: 2px 10px;
     background: #ffbd59;
     border: 2px solid #2e0500;
@@ -371,7 +373,7 @@ h4{ display: flex;
 
 .book-card p:nth-of-type(3) {            /* description */
     grid-area: desc;
-    font-size: 0.85rem;
+    font-size: 0.85em;
     line-height: 1.5;
 
     /* clamp to 5 lines */
@@ -382,13 +384,6 @@ h4{ display: flex;
     overflow: hidden;
 }
 
-/* WebKit scrollbar (Chrome/Edge) */
-#book-list::-webkit-scrollbar { height: 10px; }
-#book-list::-webkit-scrollbar-track { background: #f2e4d0; }
-#book-list::-webkit-scrollbar-thumb {
-    background: #2e0500;
-    border-radius: 6px;
-}
 
 .cont form.add-books{
     display: grid;
@@ -438,7 +433,7 @@ h4{ display: flex;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 14px;
-    max-height: 300px;
+    max-height: 600px;
     padding: 15px;
     overflow-y: auto;
 }
@@ -514,7 +509,7 @@ h4{ display: flex;
     padding: 8px 16px;
     font: inherit;
     color: #2e0500;
-    background: #ffbf58;
+    background: #dd6c02;
     border: 2px solid #2e0500;
     border-radius: 0;
     cursor: pointer;
@@ -528,4 +523,26 @@ h4{ display: flex;
     grid-column: 1 / -1;
     margin: 0;
     font-size: 0.85rem;
+}
+
+
+
+/*========================  Cover image and Link ===============================*/
+
+.display img {
+    width: 120px;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    margin: 10px 0;
+}
+
+.display a {
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.display button {
+    display: block;
+    margin-top: 10px;
 }

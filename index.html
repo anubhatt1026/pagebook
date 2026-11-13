@@ -17,20 +17,28 @@
             <br><div><a href=saved.html><div class="click"><img src="images/bookmark.png"><small>Saved</small></div></a></div>
             <br><div><a href=manage.html><div class="click"><img src="images/folder.png"><small>Manage</small></div></a></div>
             <p class="big-space"></p>
-            <div class="click"><a href=images/silly.webp><font style=color:rgb(123,0,0)><img src="images/logout.png"><small>Log out</small></font></a></div>
+
+            <div class="click">
+                <button id="log-out" type="button" >
+                    <font style=color:rgb(123,0,0)><img src="images/logout.png">
+                        <small>Log out</small>
+                    </font>
+                </button>
+            </div>
         </div>
+
         <div id="feed">
             <form class="search-bar">
                 <input id="search" type="text" placeholder="Author, Book Titles, etc.">
                 <button type="submit"><img src="images/orgsearchicon.png"></button>
             </form>
-            <div><h2>Read Anytime.</h2></div>
+            <div><h2>Read Anytime</h2></div>
             <div id="current-read">heh</div>
-            <div><h4>Explore more</h4></div>
             <div id="book-list"></div>
         </div>
     </div>
 <script src="js/books.js"></script>
+<script src="js/logout.js"></script>
 
 </body>
 

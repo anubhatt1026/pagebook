@@ -26,12 +26,62 @@ function displayBook(books){
 
             const desc=document.createElement("p");
             desc.textContent= book.book_description || "No Description";
+            
+            if(book.cover_img){
+                const cover=document.createElement("img");
+                cover.src=book.cover_img;
+                cover.alt=`cover of ${book.title}`;
+                cover.width=120;
+                card.appendChild(cover);
+            }
 
+            if(book.links){
+                const linkBook=document.createElement("a");
+                linkBook.href=book.links;
+                linkBook.textContent="open";
+                linkBook.target="_blank";
+                linkBook.rel="noopener noreferrer";
+                card.appendChild(linkBook);
+            }
+
+
+            const saved=document.createElement("button");
+            saved.textContent = "Save";  
+            saved.type="button";
+
+            saved.addEventListener("click", async()=>{
+                const userId=localStorage.getItem("user_id");
+
+                if(!userId){
+                    alert("Please Sign In");
+                    window.location.href="login.html";
+                    return;
+                }
+               try {
+                 const response=await fetch("/api/saved_books",{
+                     method: "POST", 
+                     headers:{"Content-Type":"application/json"},
+                     body: JSON.stringify({user_id:Number(userId),book_id:book.book_id})
+                 })
+                 const data=await response.json();
+                 if(!response.ok){
+                     alert(data.message);
+                     return;
+                 }
+                 alert("Book saved successfully");
+               } 
+               catch (error) {
+                    console.error("Save Error", error);
+                    alert("Could not save book");
+               }
+            })
+
+            
             card.appendChild(title);
             card.appendChild(author);
             card.appendChild(genre);
             card.appendChild(desc);
-
+            card.appendChild(saved);
             bookList.append(card);
 
     })

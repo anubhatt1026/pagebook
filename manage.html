@@ -17,7 +17,13 @@
             <br><div><a href=saved.html><div class="click"><img src="images/bookmark.png"><small>Saved</small></div></a></div>
             <br><div><a href=manage.html><div class="click"><img src="images/folder.png"><small>Manage</small></div></a></div>
             <p class="big-space"></p>
-            <div><a href=images/silly.webp><div class="click"><font style=color:rgb(123,0,0)><img src="images/logout.png"><small>Log out</small></font></div></a></div>
+             <div class="click">
+                <button id="log-out" type="button" >
+                    <font style=color:rgb(123,0,0)><img src="images/logout.png">
+                        <small>Log out</small>
+                    </font>
+                </button>
+            </div>
         </div>
         <div id="feed">
             <form class="search-bar">
@@ -25,9 +31,11 @@
                 <button type="reset"><img src="images/orgsearchicon.png"></button>
             </form>
             <div class="cont">
-                <h1 align="left" style="margin-left: 7px;">Manage</h1>
-                <h4 align="left" style="margin-left: 7px; color: rgb(107, 105, 105);">23 books saved in "All"</h4>
+                    <h1 align="left" style="margin-left: 7px;">Manage</h1>   
+                    <h4 align="left" style="margin-left: 7px; color: rgb(107, 105, 105);">23 books saved in "All"</h4>
+                    <button type="button" id="open-add"><a href="#add">+ Add book</a></button>
                 <div id="manage-book"></div>
+                
             </div>
             </div>
         <div id="add">      
@@ -47,6 +55,7 @@
         </div>
     </div>
 <script src="js/manage.js"></script>
+<script src="js/logout.js"></script>
 </body>
 
 </html>

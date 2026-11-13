@@ -139,3 +139,15 @@ cancel.addEventListener("click", ()=>{
 })
 loadBooks();
 
+
+//========pop-up od add book=========
+const addPanel = document.getElementById('add');
+
+// OPEN: needs a trigger (see below)
+const openBtn = document.getElementById('open-add');
+if (openBtn) openBtn.addEventListener('click', () => addPanel.classList.add('open'));
+
+// CLOSE: Cancel button
+document.getElementById('cancel').addEventListener('click', () => {
+    addPanel.classList.remove('open');
+});
